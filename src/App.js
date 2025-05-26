@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Task from './Task/Task.jsx';
 
 function App() {
+  const tasks = [
+    { id: 1, title: 'Review JSX ', done: true },
+    { id: 2, title: 'Review  Components', done: true },
+    { id: 3, title: 'Review  Props', done: true },
+    { id: 4, title: ' Understanding useState ', done: false },
+    { id: 5, title: 'Review  State Handling', done: false },
+
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1> Task List </h1>
+      {tasks.map(task => (
+        <Task key={task.id} title={task.title} done={task.done} />  
+        // بالجزئية  هون بكون طبقت ال  Component بطبقت ال Props وال 
+      ))}
     </div>
   );
 }
