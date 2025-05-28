@@ -1,5 +1,5 @@
 import Task from './Task/Task.jsx';
-
+import State from './Task/State.jsx';
 function App() {
   const tasks = [
     { id: 1, title: 'Review JSX ', done: true },
@@ -17,6 +17,7 @@ function App() {
         <Task key={task.id} title={task.title} done={task.done} />  
         // بالجزئية  هون بكون طبقت ال  Component بطبقت ال Props وال 
       ))}
+      <State />
     </div>
   );
 }
