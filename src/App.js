@@ -1,5 +1,6 @@
 import Task from './Task/Task.jsx';
 import State from './Task/State.jsx';
+import Event from './Task/Event.jsx';
 function App() {
   const tasks = [
     { id: 1, title: 'Review JSX ', done: true },
@@ -18,6 +19,7 @@ function App() {
         // بالجزئية  هون بكون طبقت ال  Component بطبقت ال Props وال 
       ))}
       <State />
+      <Event />
     </div>
   );
 }
