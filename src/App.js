@@ -1,6 +1,7 @@
 import Task from './Task/Task.jsx';
 import State from './Task/State.jsx';
 import Event from './Task/Event.jsx';
+import Effect from './Task/Effect.jsx';
 function App() {
   const tasks = [
     { id: 1, title: 'Review JSX ', done: true },
@@ -20,6 +21,8 @@ function App() {
       ))}
       <State />
       <Event />
+      <Effect />
+      
     </div>
   );
 }
